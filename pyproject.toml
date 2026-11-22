@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solutionsquery"
+version = "0.1.0"
+description = "Live multi-agent bidding: agents propose different solutions to a need, you pick the winner, and it spirals into a finished project."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+solutionsquery = "solutionsquery.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["solutionsquery*"]
