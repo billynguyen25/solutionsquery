@@ -15,8 +15,6 @@ Message = dict
 
 
 class ChatClient:
-    """Minimal OpenAI-compatible chat completions client (stdlib only)."""
-
     def __init__(
         self,
         api_key: str,

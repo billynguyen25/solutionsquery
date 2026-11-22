@@ -1,5 +1,3 @@
-"""solutionsquery — live multi-agent solution bidding with a spiral build phase."""
-
 __version__ = "0.1.0"
 
 from .agents import PERSONAS, Persona

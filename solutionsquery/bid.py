@@ -63,7 +63,6 @@ def run_bidding(
     need: str,
     on_agent_token: Optional[Callable[[Persona, str], None]] = None,
 ) -> List[Bid]:
-    """Run all personas concurrently; each streams its pitch live."""
     bids: List[Optional[Bid]] = [None] * len(personas)
 
     def work(index: int, persona: Persona) -> None:

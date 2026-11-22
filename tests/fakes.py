@@ -6,12 +6,6 @@ from solutionsquery.agents import PERSONAS
 
 
 class FakeClient:
-    """Scripted stand-in for ChatClient.
-
-    `by_persona` maps a persona name to a fixed reply (used for bidding).
-    `script` is a list of replies consumed in order (used for the spiral).
-    """
-
     def __init__(self, by_persona: Optional[Dict[str, str]] = None, script: Optional[List[str]] = None):
         self.by_persona = by_persona or {}
         self.script = list(script or [])

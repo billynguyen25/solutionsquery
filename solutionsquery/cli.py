@@ -26,8 +26,6 @@ def slugify(text: str, max_len: int = 40) -> str:
 
 
 class LivePrinter:
-    """Thread-safe live output: streamed tokens are tagged with the speaking agent."""
-
     def __init__(self, use_color: bool = True) -> None:
         self.use_color = use_color
         self._lock = threading.Lock()
@@ -107,7 +105,6 @@ def print_bid_card(printer: LivePrinter, number: int, bid: Bid) -> None:
 
 
 def choose_winner(printer: LivePrinter, bids: List[Bid], pick: Optional[int], client: ChatClient, need: str, on_agent_token) -> tuple:
-    """Return (bids, winner_index). Supports 'r' to re-bid interactively."""
     while True:
         if pick is not None:
             if not 1 <= pick <= len(bids):
